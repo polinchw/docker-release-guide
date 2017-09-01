@@ -2,7 +2,7 @@
 Guide to versioning and releasing Docker containers.
 
 ## Overview
-This Git repo will serve as a guide for versioning and building an application in
+This Git repo will serve as a guide for building and versioning an application in
 with the goal of releasing it with Docker-Machine.
 
 + Source code
