@@ -8,8 +8,8 @@ with the goal of releasing it with Docker-Machine.
 + Diagram
 + Source code
 + Building, tagging, and releasing with Jenkins
-+ Verify the releasing to Nexus
-+ Verify the releasing to a Docker Repository
++ Verify the release to Nexus
++ Verify the release to a Docker Repository
 + Controlling the deployment with Docker-Machine
 + Creating a Docker Swarm with Docker-Machine
 + Adding Portainer to view the Docker-Swarm(s)
