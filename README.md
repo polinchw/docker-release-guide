@@ -9,7 +9,7 @@ with the goal of releasing it with Docker-Machine.
 + Source code
 + Building, tagging, and releasing with Jenkins
 + Verify the release to Nexus
-+ Verify the release to a Docker Repository
++ Verify the release to a Docker Registry
 + Controlling the deployment with Docker-Machine
 + Creating a Docker Swarm with Docker-Machine
 + Adding Portainer to view the Docker-Swarm(s)
@@ -60,4 +60,15 @@ Once Jenkins has successfully run all of these steps you will have produced a ta
  
  Nexus is a binary repository.  It will store the versioned jar file that was created by Jenkins in
  the previous section. Nexus can be used by a software development team to share libraries that the
- team creates.  It can also pull in and cache all the 3rd party dependencies that your code needs to build. 
+ team creates.  It can also pull in and cache all the 3rd party dependencies that your code needs to build.
+ 
+ We should check that Nexus has stored the build that was produced by Jenkins. 
+ 
+ ## Verify the release to a Docker Registry
+ 
+ We want to use a Docker registry to store our docker builds.  I'm using Docker Hub to store my docker
+ builds in this example.  You can set up your own Docker registry if your organization needs it.  
+ 
+ We should check that Docker Hub has recorded the new versioned build.
+ 
+  
