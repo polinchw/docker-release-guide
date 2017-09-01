@@ -82,3 +82,7 @@ Once Jenkins has successfully run all of these steps you will have produced a ta
  
  ## Controlling the deployment with Docker-Machine
  
+ Once the Docker Swarm is up and running you can deploy the Docker image that was built to it.  This is an example 
+ of how to run the container as a Docker Service using Docker-Machine:
+ 
+ docker-machine ssh monitorserver-swarm-master 'docker service create -e "SPRING_PROFILES_ACTIVE=aws-dev" -e "JASYPT_ENCRYPTOR_PASSWORD=xxx" --replicas 2 --name monitor-server -p 8080:8080 polinchw/monitor-server'
