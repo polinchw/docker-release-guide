@@ -5,7 +5,7 @@ Guide to versioning and releasing Docker containers.
 This Git repo will serve as a guide for building and versioning an application in
 with the goal of releasing it with Docker-Machine.
 
-+ Diagram
++ Process Diagram
 + Source code
 + Building, tagging, and releasing with Jenkins
 + Verify the release to Nexus
