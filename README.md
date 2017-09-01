@@ -27,6 +27,7 @@ you no longer want there.
 This guide will use an app that is commited to GitHub as an example of how to put something through 
 the release process.
 
-### Example App
-
 ![Sample App](https://github.com/polinchw/monitorserver)
+
+This sample app is a Java application that will get tagged, versioned, and bundled up as a Docker image
+so that it can be release.
