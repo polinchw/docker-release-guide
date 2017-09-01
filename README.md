@@ -5,6 +5,7 @@ Guide to versioning and releasing Docker containers.
 This Git repo will serve as a guide for building and versioning an application in
 with the goal of releasing it with Docker-Machine.
 
++ Diagram
 + Source code
 + Building, tagging, and releasing the code with Jenkins
 + Tagging the Git repo
@@ -14,6 +15,8 @@ with the goal of releasing it with Docker-Machine.
 + Creating a Docker Swarm with Docker-Machine
 + Adding Portainer to view the Docker-Swarm(s)
 + Use Portainer to deploy application updates
+
+## Diagram
 
 ## Source Code
 
@@ -30,4 +33,7 @@ the release process.
 ![Sample App](https://github.com/polinchw/monitorserver)
 
 This sample app is a Java application that will get tagged, versioned, and bundled up as a Docker image
-so that it can be release.
+so that it can be release.  The way that the tagging and versioning is done will be specific to Java 
+in this example, however how one would release the end product Docker image is programming language 
+agnostic.
+
