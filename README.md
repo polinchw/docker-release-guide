@@ -29,4 +29,4 @@ the release process.
 
 ### Example App
 
-![alt text](https://github.com/polinchw/monitorserver)
+![Sample App](https://github.com/polinchw/monitorserver)
