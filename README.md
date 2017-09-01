@@ -10,8 +10,8 @@ with the goal of releasing it with Docker-Machine.
 + Building, tagging, and releasing with Jenkins
 + Verify the release to Nexus
 + Verify the release to a Docker Registry
-+ Controlling the deployment with Docker-Machine
 + Creating a Docker Swarm with Docker-Machine
++ Controlling the deployment with Docker-Machine
 + Adding Portainer to view the Docker-Swarm(s)
 + Use Portainer to deploy application updates
 
@@ -71,4 +71,14 @@ Once Jenkins has successfully run all of these steps you will have produced a ta
  
  We should check that Docker Hub has recorded the new versioned build.
  
-  
+ ## Creating a Docker Swarm with Docker-Machine
+ 
+ Docker-Machine is an application that can remotely control servers that have Docker installed.  I'm using
+ Docker-Machine to group servers into a Docker Swarm then I'm deploying my app with it.
+ 
+ I have a script for creating a Docker Swarm on AWS with Docker-Machine.
+ 
+ ![Bash script for creating Docker Swarms on AWS with Docker-Machine](https://github.com/polinchw/docker-tools)
+ 
+ ## Controlling the deployment with Docker-Machine
+ 
