@@ -86,3 +86,17 @@ Once Jenkins has successfully run all of these steps you will have produced a ta
  of how to run the container as a Docker Service using Docker-Machine:
  
  docker-machine ssh monitorserver-swarm-master 'docker service create -e "SPRING_PROFILES_ACTIVE=aws-dev" -e "JASYPT_ENCRYPTOR_PASSWORD=xxx" --replicas 2 --name monitor-server -p 8080:8080 polinchw/monitor-server'
+ 
+ ## Adding Portainer to view the Docker-Swarm(s)
+ 
+ Docker-Machine is great but it's command line driven.  You can add a pretty GUI front end to Docker-Machine by installing
+ Portainer.  In my example I'm running Portainer on the same Linux VM that is running Docker-Machine.
+ 
+ ## Use Portainer to deploy application updates
+ 
+ Once you have your app released with Docker-Machine or Portainer (yes you can release your Docker Service right from Portainer) 
+ you can use Portainer to update your app by running another build through Jenkins again then simply updating the 
+ Docker Service number in Portainer.  
+ 
+ Portainer would be great for a Dev-Ops group that is responsible for pushing out releases.    
+ 
