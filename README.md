@@ -18,7 +18,7 @@ with the goal of releasing it with Docker-Machine.
 
 ## Video
 
-[![Instructions on YouTube](https://www.youtube.com/watch?v=FTmYFLxsDP0)]
+https://www.youtube.com/watch?v=FTmYFLxsDP0
 
 
 ## Process Diagram
