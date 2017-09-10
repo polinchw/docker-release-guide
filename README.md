@@ -5,6 +5,7 @@ Guide to versioning and releasing Docker containers.
 This Git repo will serve as a guide for building and versioning an application in
 with the goal of releasing it with Docker-Machine.
 
++ Video
 + Process Diagram
 + Source code
 + Building, tagging, and releasing with Jenkins
@@ -14,6 +15,10 @@ with the goal of releasing it with Docker-Machine.
 + Controlling the deployment with Docker-Machine
 + Adding Portainer to view the Docker-Swarm(s)
 + Use Portainer to deploy application updates
+
+## Video
+
+![Instructions on YouTube](https://www.youtube.com/watch?v=FTmYFLxsDP0)
 
 ## Process Diagram
 
