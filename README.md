@@ -23,6 +23,8 @@ https://www.youtube.com/watch?v=FTmYFLxsDP0
 
 ## Process Diagram
 
+![alt text](https://raw.githubusercontent.com/polinchw/docker-release-guide/60d9607c3fb6b8430e1ba3496b975f044f8171f3/diagrams/process.png)
+
 ## Source Code
 
 Your source code will be the most important part of your project.  You'll want it kept in a source
