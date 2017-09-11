@@ -1,13 +1,15 @@
 @startuml
 
-title Release Components
+title Release Process
+
+
 
 package "Git Hub" {
 [Repo]
 }
 
 package "CI Server" {
-[Jenkins] -> [Nexus] : 2. Push Binary
+[Jenkins] -> [Nexus] : 2. Compile and push binary
 }
 
 package "Docker Hub" {
@@ -15,11 +17,11 @@ package "Docker Hub" {
 }
 
 package "Docker Machine Server" {
-[Portainer]
 [Docker-Machine]
+[Portainer]
 }
 
-package "Docker Swarm" {
+package "Docker Swarm Servers" {
   package "Docker Swarm 01" {
   [Swarm-Manager]
   }
@@ -28,12 +30,15 @@ package "Docker Swarm" {
   [Swarm-Worker]
   }
 }
+() User --> [Jenkins]
+() User --> [Docker-Machine]
 [Jenkins] --> Repo : 1. Pull in code
-[Jenkins] --> Registry : 3. Push Image
-[Docker-Machine] --> Registry : 4. Pull Image
-[Docker-Machine] --> [Swarm-Manager] : 5. Deploy Container
-[Swarm-Manager] --> [Swarm-Worker] : 6. Replicate Container
-[Portainer] --> [Swarm-Manager] : 7. View Swarm
+[Jenkins] --> Registry : 3. Build and push image
+[Docker-Machine] --> [Swarm-Manager] : 4. Create swarm
+[Swarm-Manager] --> [Swarm-Worker]
+[Swarm-Manager] --> [Registry] : 5. Pull image
+[Swarm-Worker] --> [Registry] : 6. Pull image
+[Portainer] --> [Swarm-Manager] : 7. View swarm
 
 
 @enduml
