@@ -1,0 +1,39 @@
+@startuml
+
+title Release Components
+
+package "Git Hub" {
+[Repo]
+}
+
+package "CI Server" {
+[Jenkins] -> [Nexus] : 2. Push Binary
+}
+
+package "Docker Hub" {
+[Registry]
+}
+
+package "Docker Machine Server" {
+[Portainer]
+[Docker-Machine]
+}
+
+package "Docker Swarm" {
+  package "Docker Swarm 01" {
+  [Swarm-Manager]
+  }
+
+  package "Docker Swarm 02" {
+  [Swarm-Worker]
+  }
+}
+[Jenkins] --> Repo : 1. Pull in code
+[Jenkins] --> Registry : 3. Push Image
+[Docker-Machine] --> Registry : 4. Pull Image
+[Docker-Machine] --> [Swarm-Manager] : 5. Deploy Container
+[Swarm-Manager] --> [Swarm-Worker] : 6. Replicate Container
+[Portainer] --> [Swarm-Manager] : 7. View Swarm
+
+
+@enduml
